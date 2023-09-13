@@ -1,10 +1,8 @@
-module.exports = function reverse (n) {
-  var result = '';
-  
-  while(number>0){
-   result = result + (number%10);
-   number = parseInt(number/10);
-  }
-  
-  return result;
-}
+module.exports = function reverse(x) {
+  if (x < 0) return -reverse(-x);
+  var str = x.toString();
+  var strArray = str.split("");
+  var revArray = strArray.reverse();
+  var rev = revArray.join("");
+  return Number(rev);
+};
